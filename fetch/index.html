@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>include fetch</title>
+</head>
+<body>
+    
+    <h1>test include fecth</h1>
+
+    <div id="monElement"></div>
+
+    <script>
+        fetch('monFichier.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('monElement').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    </script>
+
+</body>
+</html>
